@@ -1,0 +1,27 @@
+
+public class LinkedList2 {
+	Node3 first;
+	
+	class Node3 {
+		int data;
+		Node3 link;
+		public Node3(int data) {
+			this.data = data; link = null;
+		}
+	}
+	void append(int data) {
+		Node3 p = first, q = null;
+
+			
+	}
+	void showList() {
+		System.out.println();
+		Node3 p = first;
+
+	}
+	void insert(int data) {
+		Node3 newNode = new Node3(data);
+		Node3 p = first, q = null;
+}}
+	
+public static void main(String[] args) {

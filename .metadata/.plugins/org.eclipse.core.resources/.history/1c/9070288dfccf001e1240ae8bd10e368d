@@ -1,0 +1,33 @@
+
+public class LinkedList2 {
+	Node3 first;
+	
+	class Node3 {
+		int data;
+		Node3 link;
+		public Node3(int data) {
+			this.data = data; link = null;
+		}
+	}
+	void append(int data) {
+		Node3 p = first, q = null;
+
+			
+	}
+	void showList() {
+		System.out.println();
+		Node3 p = first;
+
+	}
+	void insert(int data) {
+		Node3 newNode = new Node3(data);
+		Node3 p = first, q = null;
+	}
+	public static void main(String[] args) {
+		LinkedList3 ll = new LinkedList3();
+		ll.append(5);ll.append(10);ll.append(15);ll.append(20);ll.append(25);
+		ll.showList();
+		ll.insert(3);ll.showList();
+		ll.insert(7);ll.showList();
+	}
+	}

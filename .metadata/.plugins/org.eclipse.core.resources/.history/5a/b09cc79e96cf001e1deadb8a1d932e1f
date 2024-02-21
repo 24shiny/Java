@@ -1,0 +1,14 @@
+package Ch8;
+
+public class MyLinkedList {
+	
+	private class Node{
+		private String data;
+		private Node link;
+		
+		public Node(String data) {
+			
+		}
+	}
+
+}

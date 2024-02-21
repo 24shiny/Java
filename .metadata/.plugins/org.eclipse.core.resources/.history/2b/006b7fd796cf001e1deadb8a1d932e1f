@@ -1,0 +1,18 @@
+package Ch8;
+
+public class MyLinkedList {
+	
+	//innerClass 1
+	private class Node{
+		private String data;
+		private Node link;
+		
+		public Node(String data) {
+			this.data = data;
+		}
+	}
+	
+	//innerclass2
+	
+
+}

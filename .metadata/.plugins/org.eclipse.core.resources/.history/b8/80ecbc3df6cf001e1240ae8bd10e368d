@@ -1,0 +1,50 @@
+public class LinkedList {
+	
+	Node3 first;
+	
+	public LinkedList() { // constructor
+		this.first = null;
+	}
+	
+	class Node {
+		int data;
+		Node link;
+		
+		public Node(int data) { // Node3's constructor
+			this.data = data; link = null;
+		}
+	}
+	
+	void append(int data) {
+		Node p = first, q = null; //q is the next node
+		Node newNode = new Node(data);
+		if(p==null) { //first
+			p = newNode;
+		}
+		else
+		{
+			while(p!=null) {
+				q = p;
+				p = p.link;
+			}
+			q.link = newNode;
+		}
+	}
+	
+	void showList() {
+		System.out.println();
+		Node3 p = first;
+
+	}
+	
+	void insert(int data) {
+		Node3 newNode = new Node3(data);
+		Node3 p = first, q = null;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

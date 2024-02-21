@@ -1,0 +1,7 @@
+package Ch8;
+
+import static Ch8.Mandarin;
+
+public class manMain {
+
+}
