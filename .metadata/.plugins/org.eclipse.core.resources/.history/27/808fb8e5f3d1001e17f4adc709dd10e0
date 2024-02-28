@@ -1,0 +1,16 @@
+package Ch10;
+
+import java.io.FileInputStream;
+
+public class Test04 {
+	
+	public static void Test() {
+	
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		}
+		
+	}
+}

@@ -1,0 +1,36 @@
+package Ch12;
+
+class Bag<T>{
+	private T thing;
+	
+	public Bag(T thing) {
+		this.thing = thing;
+	}
+
+	public T getThing() {
+		return thing;
+	}
+
+	public void setThing(T thing) {
+		this.thing = thing;
+	}
+	
+	void showType() {
+		System.out.println("a type of T is : " + thing.getClass().getName());
+	}
+}
+
+class book{}
+class pencilcase{}
+class notebook{}
+
+public class Bagpack {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Bag<book> bag = new Bag<>(new book());
+		Bag<pencilcase> pencilcase = new Bag<>(new pencilcase());
+		Bag<notebook> notebook = new Bag<>(new notebook());
+	}
+
+}

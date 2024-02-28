@@ -1,0 +1,62 @@
+public class LinkedList {
+	
+	Node first;
+	
+	public LinkedList() { 
+		this.first = null;
+	}
+	
+	class Node { //inner class
+		int data;
+		Node link;
+		public Node(int data) { 
+			this.data = data; link = null;
+		}
+	}
+	
+	void append(int data) {
+		Node newNode = new Node(data);
+		if(first==null) { //first
+			first = newNode;
+		}
+		else
+		{	Node next = first;
+			while(next.link!=null) {
+				next = next.link;
+			}
+			next.link = newNode;
+		}
+	}
+	
+	void showList() {
+		if(first==null) {
+			System.out.println("the list is empty");
+		}
+		else
+		{
+			Node next = first;
+			while(next!=null) {
+				System.out.print(next.data+" ");
+				next = next.link;
+			}
+		}
+	}
+	
+	void insert(int data) {
+		Node newNode = new Node(data);
+//		Node p = first, q = null;
+		if(first.data>data) {
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList ll = new LinkedList();
+		ll.append(5);ll.append(10);ll.append(15);ll.append(20);ll.append(25);
+		ll.showList();
+//		ll.insert(3);ll.showList();
+//		ll.insert(7);ll.showList();
+	}
+
+}

@@ -1,0 +1,60 @@
+package Ch12;
+
+class Bag4<T,N>{ // T ~ class
+	private T thing;
+	private N name;
+	
+	public Bag4() {}
+	
+	public Bag4(T thing, N name) {
+		this.thing = thing;
+		this.name = name;
+	}
+
+	public T getThing() {
+		return thing;
+	}
+
+	public void setThing(T thing) {
+		this.thing = thing;
+	}
+	
+	public N getName() {
+		return name;
+	}
+
+	public void setName(N name) {
+		this.name = name;
+	}
+	
+	void showType() {
+		System.out.println("a type of T is : " + thing.getClass().getName());
+		System.out.println("a type of N is : " + name.getClass().getName());
+	}
+}
+
+class book4{
+
+	@Override
+	public String toString() {
+		return "Newbook";
+	}
+	
+}
+
+public class Backpack4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Bag4<Newbook, String> bag1 = new NewBag<Bag4, String>(new book4(), "science");
+		bag1.showType();
+		
+		book4 nb = bag1.getThing();
+		String name = bag1.getName();
+		
+		System.out.println(nb + " is about " + name);
+		
+		
+	}
+
+}

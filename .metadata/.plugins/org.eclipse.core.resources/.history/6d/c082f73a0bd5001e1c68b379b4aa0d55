@@ -1,0 +1,8 @@
+package Ch12;
+
+public class UserBean {
+	private String id;
+	private String name;
+	private String tel;
+	private String address;
+}

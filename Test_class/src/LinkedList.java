@@ -44,7 +44,22 @@ public class LinkedList {
 	
 //	void insert(int data) {
 //		Node newNode = new Node(data);
-//		Node p = first, q = null;
+////		Node p = first, q = null;
+//		if(first==null) { //first
+//			first = newNode;
+//		}
+//		else
+//		{	
+//			Node next = first;
+//			while(next.link!=null) {
+//				if(p.data>data) {
+//					
+//				}
+//				next = next.link;
+//			}
+//			next.link = newNode;
+//		}
+//
 //	}
 	
 	public static void main(String[] args) {
@@ -52,6 +67,7 @@ public class LinkedList {
 		LinkedList ll = new LinkedList();
 		ll.append(5);ll.append(10);ll.append(15);ll.append(20);ll.append(25);
 		ll.showList();
+		System.out.println();
 //		ll.insert(3);ll.showList();
 //		ll.insert(7);ll.showList();
 	}

@@ -1,0 +1,28 @@
+package Ch10;
+
+//public class nagativeNumException() extends Exception{
+//	public nagativeNumException() {
+//	super("negative numbers are not allowed");
+//}
+//}
+
+public class Test05 {
+	
+	int battery = 0;
+	public void charge(int batteryGauge) {
+		if(batteryGauge<0) {
+			batteryGauge=0;
+		try {
+			throw new nagativeNumException();
+		}
+		catch{
+			
+		}
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

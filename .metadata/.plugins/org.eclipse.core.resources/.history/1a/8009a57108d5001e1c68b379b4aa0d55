@@ -1,0 +1,15 @@
+package Ch12;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class Test01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try(FileInputStream fi = new FileInputStream("hello.txt"); FileOutputStream fo = FileOutputStream("copy.txt");){
+			
+		}
+	}
+
+}

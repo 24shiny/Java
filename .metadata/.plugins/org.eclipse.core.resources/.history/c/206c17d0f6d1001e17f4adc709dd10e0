@@ -1,0 +1,18 @@
+package Ch10;
+
+public class Test05 {
+	
+	public nagativeNumException() {
+		super("negative numbers are not allowed");
+	}
+	
+	int battery = 0;
+	public void charge(int batteryGauge) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
