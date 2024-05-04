@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>MustHaveJSP</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>INIT_PARAM</param-name>
+  	<param-value>web.xml에 저장한 초기화 매개변수</param-value>
+  </context-param>
+  
+    <context-param>
+  	<param-name>MySQLDriver</param-name>
+  	<param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+    <context-param>
+  	<param-name>MySQLURL</param-name>
+  	<param-value>jdbc:mysql://localhost:3306/musthave</param-value>
+  </context-param>
+    <context-param>
+  	<param-name>MySQLId</param-name>
+  	<param-value>musthave</param-value>
+  </context-param>
+    <context-param>
+  	<param-name>MySQLPwd</param-name>
+  	<param-value>tiger</param-value>
+  </context-param>
+
+    <context-param>
+  	<param-name>POSTS_PER_PAGE</param-name>
+  	<param-value>10</param-value>
+  	</context-param>
+     <context-param>
+  	<param-name>PAGES_PER_BLOCK</param-name>
+  	<param-value>5</param-value>
+  	</context-param>
+  
+  <session-config>
+  	<session-timeout>20</session-timeout>
+  </session-config>
+  
+  <servlet>
+  	<servlet-name>MVCBoardList</servlet-name>
+  	<servlet-class>mvcboard.ListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MVCBoardList</servlet-name>
+  	<url-pattern>/Ch14/list.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>MVCBoardWrite</servlet-name>
+  	<servlet-class>mvcboard.WriteController</servlet-class>
+  	<multipart-config>
+  		<max-file-size>1048576</max-file-size>
+  		<max-request-size>10485760</max-request-size>
+  	</multipart-config>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MVCBoardWrite</servlet-name>
+  	<url-pattern>/Ch14/write.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<servlet-class>servlet.Hello</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/Ch12/Hello.do</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>BasicFilter</filter-name>
+  	<filter-class>filter.BasicFilter</filter-class>
+  	<init-param>
+  		<param-name>FILTER_INIT_PARAM</param-name>
+  		<param-value>initialized parameter for filter</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>BasicFilter</filter-name>
+  	<url-pattern>/Ch15/BasicFilter.jsp</url-pattern>
+  </filter-mapping>
+</web-app>

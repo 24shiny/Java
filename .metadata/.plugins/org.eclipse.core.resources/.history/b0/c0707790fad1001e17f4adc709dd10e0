@@ -1,7 +1,0 @@
-package Ch10;
-
-public class nagativeNumException extends Exception {
-	public nagativeNumException() {
-		super("negative numbers are not allowed");
-	}
-}
